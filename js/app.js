@@ -64,7 +64,7 @@ Player.prototype.update=function() {
 	}
 	if(this.x<0)
 		{
-			x=420;
+			this.x=420;
 		}
 	if(this.y > 440)
 		{
@@ -105,7 +105,7 @@ Player.prototype.handleInput= function(key) {
 // Place the player object in a variable called player
 
 var allEnemies=[];
-var player=new Player(425,440,50);
+var player=new Player(200,380,50);
 var EnemeyPosition=[60,140,220];
 var enemy;
 
