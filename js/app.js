@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function(x,y,speed) {
+const Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 	
@@ -29,11 +29,12 @@ Enemy.prototype.update = function(dt) {
 	
 	//checking for collision between player and enemeis
 	
-	if(player.x < this.x+60
+	if(player.x < this.x+74
 	   && player.x+37 > this.x 
 	   && player.y < this.y+25 
 	   && player.y+30>this.y)
 		{
+			//alert('Colisson occur');
 			player.x=200;
 			player.y=380;
 		}
@@ -48,7 +49,7 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-var Player=function(x,y,speed)
+const Player=function(x,y,speed)
 {
 	this.x=x;
 	this.y=y;
@@ -60,11 +61,11 @@ var Player=function(x,y,speed)
 
 Player.prototype.update=function() {	
 	if(this.x>425){
-		this.x=0;
+		this.x=400;
 	}
 	if(this.x<0)
 		{
-			this.x=420;
+			this.x=0;
 		}
 	if(this.y > 440)
 		{
@@ -104,10 +105,10 @@ Player.prototype.handleInput= function(key) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-var allEnemies=[];
-var player=new Player(200,380,50);
-var EnemeyPosition=[60,140,220];
-var enemy;
+let allEnemies=[];
+const player=new Player(200,380,50);
+let EnemeyPosition=[60,140,220];
+let enemy;
 
 EnemeyPosition.forEach(function(posY){
 	enemy=new Enemy(0,posY,100+Math.floor(Math.random()*1024));
@@ -116,7 +117,7 @@ EnemeyPosition.forEach(function(posY){
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
+    const allowedKeys = {
         37: 'left',
         38: 'up',
         39: 'right',
