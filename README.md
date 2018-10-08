@@ -8,7 +8,7 @@ In this game you have a Player and Enemies (bugs). The goal of the player is to 
 
 Demo
 ==============================
-![](https://github.com/hasnain003/fend-arcade-game/blob/master/images/demo%20(2).webm?raw=true)
+![](https://github.com/hasnain003/fend-arcade-game/blob/master/images/demo.gif?raw=true)
 
 > [Go Live](https://hasnain003.github.io/fend-arcade-game/)
 
